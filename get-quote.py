@@ -5,9 +5,10 @@ def primary():
   quotes = f.readlines()
   f.close()
 
-  length = len(quotes) - 1
-  randomQuote = random.randint(0, length)
-  print(quotes[randomQuote])
+  length = len(quotes)
+  randomIndex = random.randint(0, length-1)
+  randomQuote = quotes[randomIndex].rstrip()
+  print(randomQuote)
 
 if __name__== "__main__":
   primary()
